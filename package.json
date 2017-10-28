@@ -4,7 +4,11 @@
   "description": "Menswhere API built with Node, Express and MongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "now": {
+    "dotenv": "variables.env.now"
   },
   "author": "Weronika Tomaszewska",
   "license": "ISC",
