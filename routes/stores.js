@@ -13,7 +13,7 @@ router.get('/', function(req, res){
 });
 
 router.post("/", function(req, res){
-  // console.log(req.body);
+  console.log(req.body);
   db.Store.create(req.body)
   .then(function(newStore){
     res.status(201).json(newStore);
