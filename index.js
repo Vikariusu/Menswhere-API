@@ -4,12 +4,15 @@ require('dotenv').config({ path: 'variables.env' });
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
+var cors = require('cors');
 
 var mongoose = require("mongoose");
 mongoose.set("debug", true);
 // connect to database
 mongoose.connect(process.env.DATABASE);
 mongoose.Promise = Promise;
+
+app.use(cors({origin: '*'}));
 
 var storeRoutes = require('./routes/stores');
 
